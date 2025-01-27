@@ -1,0 +1,116 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #09203A;
+    height: 93px;
+    color: white;
+    width: 100%;
+}
+
+
+
+#Education {
+    color: #12D640;
+    border-bottom: 2px solid yellow; /* Adds a bottom border */
+    padding-bottom: 3px; /* Optional: Add some space below the text */
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: bold;
+    padding: 12%;
+    margin-left: -10%;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-right: 2rem;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #12D640;
+}
+
+/* Hamburger Styles (visible on mobile) */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+}
+
+
+
+
+
+
+
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    /* Navbar */
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #09203A;
+        flex-direction: column;
+        align-items: center;
+        display: none;
+        padding: 1rem 0;
+    }
+
+    h1{
+        margin-left: -12%;
+    }
+    .nav-links li {
+        margin: 1rem 0;
+    }
+
+    .hamburger {
+        display: flex;
+        margin-left: 25%;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+    
+
+}
