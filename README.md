@@ -1,1 +1,1 @@
-This is my updates portfolio,🚀
+This is my updated portfolio,🚀
