@@ -1,0 +1,232 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated Home Page with Stars</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle, #000428, #004e92);
+      font-family: Arial, sans-serif;
+      color: #fff;
+    }
+
+    .stars {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    .star {
+      position: absolute;
+      width: 3px;
+      height: 3px;
+      background: #fff;
+      border-radius: 50%;
+      opacity: 0;
+      animation: blink 2s infinite ease-in-out;
+    }
+
+    @keyframes blink {
+      0%, 100% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="stars"></div>
+
+  <script>
+    const starsContainer = document.querySelector(".stars");
+
+    // Generate random stars
+    for (let i = 0; i < 100; i++) {
+      const star = document.createElement("div");
+      star.classList.add("star");
+      star.style.left = Math.random() * 100 + "vw";
+      star.style.top = Math.random() * 100 + "vh";
+      star.style.animationDelay = Math.random() * 2 + "s";
+      starsContainer.appendChild(star);
+    }
+
+    const button = document.getElementById("cta-button");
+    button.addEventListener("click", () => {
+      alert("Time to explore the stars!");
+    });
+  </script>
+</body>
+</html> -->
+
+
+
+<!-- other -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Starry Animated Home Page</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle, #020024, #090979, #000428);
+      font-family: Arial, sans-serif;
+      color: #fff;
+    }
+
+    h1 {
+      font-size: 3rem;
+      text-align: center;
+      animation: fadeIn 3s ease-out forwards;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px 25px;
+      font-size: 1.2rem;
+      background-color: #ffffff;
+      color: #333;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    button:hover {
+      transform: scale(1.1);
+    }
+
+    /* Stars Background */
+    .stars, .shooting-stars {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    .star {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background: #fff;
+      border-radius: 50%;
+      opacity: 0;
+      animation: blink 2s infinite ease-in-out;
+    }
+
+    @keyframes blink {
+      0%, 100% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+    }
+
+    /* Shooting Stars */
+    .shooting-star {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background: linear-gradient(120deg, #fff, transparent);
+      border-radius: 50%;
+      opacity: 0.7;
+      animation: shoot 4s infinite ease-in-out;
+    }
+
+    @keyframes shoot {
+      0% {
+        opacity: 0;
+        transform: translate(0, 0) scale(0);
+      }
+      50% {
+        opacity: 1;
+        transform: translate(300px, -300px) scale(1.5);
+      }
+      100% {
+        opacity: 0;
+        transform: translate(600px, -600px) scale(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <!-- <h1>Welcome to the Starry Night</h1> -->
+    <button id="cta-button">Start the Journey</button>
+  </div>
+  <div class="stars"></div>
+  <div class="shooting-stars"></div>
+
+  <!-- Background Music -->
+  <audio id="bg-music" loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-relaxing.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    // Generate blinking stars
+    const starsContainer = document.querySelector(".stars");
+    for (let i = 0; i < 100; i++) {
+      const star = document.createElement("div");
+      star.classList.add("star");
+      star.style.left = Math.random() * 100 + "vw";
+      star.style.top = Math.random() * 100 + "vh";
+      star.style.animationDelay = Math.random() * 2 + "s";
+      starsContainer.appendChild(star);
+    }
+
+    // Generate shooting stars
+    const shootingStarsContainer = document.querySelector(".shooting-stars");
+    for (let i = 0; i < 10; i++) {
+      const shootingStar = document.createElement("div");
+      shootingStar.classList.add("shooting-star");
+      shootingStar.style.left = Math.random() * 100 + "vw";
+      shootingStar.style.top = Math.random() * 100 + "vh";
+      shootingStar.style.animationDelay = Math.random() * 4 + "s";
+      shootingStarsContainer.appendChild(shootingStar);
+    }
+
+    // Play background music on button click
+    const button = document.getElementById("cta-button");
+    const bgMusic = document.getElementById("bg-music");
+
+    button.addEventListener("click", () => {
+      bgMusic.play();
+      alert("Your cosmic journey begins!");
+    });
+  </script>
+</body>
+</html>
