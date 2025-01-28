@@ -209,8 +209,8 @@ nav a:hover {
     width: 90px;
     height: 30px;
     position: relative;
-    left: 90%;
-    top: -25%;
+    left: 92%;
+    top: 61%;
     font-size: 12px;
     background-color: #ffffff;
     color: #333;
@@ -279,8 +279,6 @@ nav a:hover {
     .icons i {
         font-size: 1rem; 
     }
-
-
 
     .stars, .shooting-stars {
         position: absolute;
