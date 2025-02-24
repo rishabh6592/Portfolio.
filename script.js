@@ -11,7 +11,7 @@ window.onload = function() {
     setTimeout(function() {
         document.getElementById('loader').style.display = 'none';
         document.getElementById('content');
-    }, 2500);
+    }, 1800);
 };
 
 
