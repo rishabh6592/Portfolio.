@@ -1,0 +1,328 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #09203A;
+    height: 93px;
+    color: white;
+    width: 100%;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #042e5f; 
+    border-radius: 5px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #09203A; 
+  }
+
+
+#Contact {
+    color: #12D640;
+    border-bottom: 2px solid yellow; /* Adds a bottom border */
+    padding-bottom: 3px; /* Optional: Add some space below the text */
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: bold;
+    padding: 12%;
+    margin-left: -10%;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-right: 2rem;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #12D640;
+}
+
+/* Hamburger Styles (visible on mobile) */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+}
+
+.main{
+    width: 100%;
+    height: 108vh;
+    background-color: #010e1b;
+}
+.main #Contactt{
+    color: white;
+    margin-left: 15.7%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 13px;
+    font-weight: 500;
+    position: relative;
+    top: 1%;
+}
+#Contactt::after {
+    content: "";
+    display: block;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.719);
+    width: 10%;
+    margin-left: 7%;
+    margin-top: -0.8%;
+}
+.boxs{
+    /* background-color: red; */
+    width: 75%;
+    height: 50%;
+    position: relative;
+    left: 14%;
+    top: 2%;
+    display: flex;
+}
+.boxs .left{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10%;
+    margin: 2%;
+}
+.left .box1{
+    width: 100%;
+    height: 45%;
+    background-color: #09203A;
+}
+.left .box1 p{
+    color: white;
+    width: 170px;
+    line-height: 20px;
+    font-size: 14px;
+    margin-left: 19.8%;
+    margin-top: 9px;
+    letter-spacing: 1.1px;
+
+}
+.left .box2{
+    width: 100%;
+    height: 45%;
+    background-color: #09203A;
+}
+.left .box2 p{
+    color: white;
+    width: 170px;
+    line-height: 20px;
+    font-size: 14px;
+    margin-left: 19.8%;
+    margin-top: 9px;
+    letter-spacing: 1.1px;
+
+}
+.boxs .right{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10%;
+    margin: 2%;    
+}
+.right .box3{
+    width: 100%;
+    height: 45%;
+    background-color: #09203A;
+}
+.right .box4{
+    width: 100%;
+    height: 45%;
+    background-color: #09203A;
+}
+.right .box4 p{
+    color: white;
+    width: 170px;
+    line-height: 20px;
+    font-size: 14px;
+    margin-left: 19.8%;
+    margin-top: 9px;
+    letter-spacing: 1.1px;
+
+}
+.boxs h3{
+    color: rgb(40,167,69);
+    padding: 0% 20%;
+    text-transform: capitalize;
+}
+.box1 i, .box2 i, .box3 i, .box4 i{
+    font-size: 1rem;
+    color: white;
+    width: 37px;
+    height: 37px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(113, 105, 105, 0.27);
+    border-radius: 50%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.boxs i{
+   position: relative;
+   top: 1.7rem;
+   left: 3rem;
+   font-size: 22px;
+}
+
+
+
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    /* Navbar */
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #09203A;
+        flex-direction: column;
+        align-items: center;
+        display: none;
+        padding: 1rem 0;
+        z-index: 999;
+    }
+    .main{
+        width: 100%;
+        height: 192%;
+    }
+     #Contactt{
+        color: white;
+        /* margin-left: -0.000001%; */
+        position: relative;
+        left: -5%;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 13px;
+        font-weight: 600;
+    }
+    #Contactt::after{
+        content: "";
+        display: block;
+        height: 1px;
+        background-color: rgba(255, 255, 255, 0.719);
+        width: 13%;
+        margin-left: 20%;
+        margin-top: -2.5%;
+    }
+    h1{
+        margin-left: -12%;
+    }
+    .nav-links li {
+        margin: 1rem 0;
+    }
+
+    .hamburger {
+        display: flex;
+        margin-left: 25%;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+    .left .box1{
+        width: 220%;
+        height: 15%;
+        position: relative;
+        left: -16%;
+        border-radius: 7px;
+    }
+    .left .box2{
+        width: 220%;
+        height: 15%;
+        position: relative;
+        left: -16%;
+        top: 15%;
+        border-radius: 7px;
+    }
+    .right .box3{
+        width: 220%;
+        height: 15%;
+        position: relative;
+        left: -12rem;
+        border-radius: 7px;
+        top: 20%;
+    }
+    .right .box4{
+        width: 220%;
+        height: 15%;
+        position: relative;
+        left: -12rem;
+        border-radius: 7px;
+        top: 35%;
+    }
+    .box1 i, .box2 i, .box3 i, .box4 i{
+        margin-left: -2rem;
+        margin-top: -0.5rem;
+    }
+    .boxs h3{
+        margin-top: -0.3rem;
+    }
+    .left .box1 p{
+        margin-top: -0.3px;
+    }
+    .right .box3 .icons .mail i {
+       margin-left: -0.5rem;
+    }
+    .right .box3 .icons .git i {
+        margin-left: -0.5rem;
+     }
+     .right .box3 .icons .linked i {
+        margin-left: -1rem;
+     }
+    
+}

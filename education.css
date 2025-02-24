@@ -106,6 +106,7 @@ h1 {
     letter-spacing: 1px;
     font-size: 13px;
     font-weight: 600;
+    position: relative;
 }
 #education::after{
     content: "";
